@@ -1,0 +1,32 @@
+*   {
+    box-sizing: border-box;
+    }
+
+body    {
+        text-align: right;
+        direction: rtl;
+        }
+
+div.mid-container  {
+                    width: 900px;
+                    margin: 0 auto;
+                    }
+
+ul  {
+    display: inline-block;
+    }
+
+div.cube    {
+            width: 293px;
+            height: 355px;
+            position: relative;
+            }
+
+div.content     {
+                background-color: lightgrey;
+                width: 200px;
+                height: 55px;
+                position: absolute;
+                bottom: 3px;
+                right: 3px;
+}
