@@ -1,32 +1,337 @@
+/* comment */
 *   {
     box-sizing: border-box;
     }
 
+
+
+    .row:after	{
+
+		content: "";
+
+		display: table;
+
+		clear: both;
+		
+}
+
 body    {
+	direction: rtl;
         text-align: right;
-        direction: rtl;
+        font-family: Arial, Helvetica, sans-serif;
         }
 
-div.mid-container  {
-                    width: 900px;
+header	{
+	background-color: grey;
+	}
+
+div.center-container  {
+                    width: 930px;
                     margin: 0 auto;
                     }
 
-ul  {
-    display: inline-block;
-    }
+nav.top-nav     {
+       		display: inline;
+		}
 
-div.cube    {
+nav.top-nav > ul	{
+			padding: 0px;
+			}
+
+nav.top-nav > ul > li     {
+			  display: inline-block;        
+			  }
+
+/* nav.top-nav > ul > li > img	{
+			  	bottom: -10px;      
+			  	} */
+/* img get no effect of the style condition */
+
+nav.top-nav > ul > li > a    	{
+            		     	display: block;
+                		text-decoration: none;
+				font-weight: bold;
+				color: white;
+              			padding: 2px 10px;
+				border-style: none none none solid;
+				border-width: thin;
+             			border-color: white;
+				}
+
+/* nav > ul > li > a:last-child	{
+                       		border-style: none;
+                        	} */
+/* last child has no effect */
+
+nav.top-nav > ul > li > a:hover  {
+                            	 background-color: lightgrey;
+			    	 text-decoration: underline;
+                	    	 color: blue;
+                            	 }
+
+li.dropdown	{
+		position: relative;
+		}
+
+div.dropdown-content	{
+			display: none;
+			position: absolute;
+			}
+
+div.dropdown-content > a	{
+				display: block;
+				background-color: grey;
+                		text-decoration: none;
+				font-weight: bold;
+				color: white;
+                		padding: 2px 10px;
+				}
+
+li.dropdown:hover > div.dropdown-content	{
+						display: block;
+						z-index: 10;
+						}
+
+div.dropdown-content > a:hover	{
+				background-color: lightgrey;
+			    	text-decoration: underline;
+                	    	color: blue;
+				}
+
+div.top-cube    {
             width: 293px;
             height: 355px;
+	    margin: 5px;
+	    float: right;
             position: relative;
             }
 
-div.content     {
-                background-color: lightgrey;
-                width: 200px;
-                height: 55px;
-                position: absolute;
-                bottom: 3px;
-                right: 3px;
-}
+div.top-cube > div.content	{
+                		/*background-color: grey;*/
+				color: white;
+                		width: 250px;
+                		height: 125px;
+                		position: absolute;
+                		bottom: -10px;
+                		right: 5px;
+				}
+
+div.top-cube > div.content > h4	{
+				font-size: 15px;
+				margin: 10px 5px 5px 5px;
+				position: absolute;
+                		bottom: 100px;
+                		right: 5px;
+				}
+
+div.top-cube > div.content > p	{
+				font-size: 14px;
+				margin: 5px 5px 5px 5px;
+				position: absolute;
+                		bottom: 35px;
+                		right: 5px;
+				}
+
+div.top-cube > div.content > a	{
+				/* float: left; */ /* float has no effect */
+				font-size: 14px;
+				color: white;
+				margin: 0px 5px 5px 20px;
+				position: absolute;
+                		bottom: 25px;
+                		right: 175px;
+				}
+
+div.top-cube > div.content > div.read-more-logo	{
+						/* float: left; */ /* float has no effect*/
+						font-size: 14px;
+						margin: 0px 5px 5px 20px;
+						position: absolute;
+                				bottom: 25px;
+                				right: 225px;
+						}
+
+/* div.top-cube > div.content > img	{
+					float: left;
+					font-size: 14px;
+					margin: 0px 5px 5px 20px;
+					position: absolute;
+                			bottom: 25px;
+                			right: 225px
+					} */
+/* img that is not inside a div, get no effect of the style conditions */
+
+div.top-cube > div.content > a:hover  {
+			    	    text-decoration: underline;
+                	    	    color: blue;
+                            	    }
+
+div.bottom-cube    {
+            width: 293px;
+            height: 355px;
+	    margin: 5px;
+	    float: right;
+            position: relative;
+            }
+
+div.bottom-cube > div.content	{
+				color: grey;
+                		width: 250px;
+                		height: 125px;
+                		position: absolute;
+                		bottom: 175px;
+                		right: 20px;
+				}
+
+div.bottom-cube > div.content > h4	{
+					font-size: 15px;
+					margin: 0px 0px 5px 0px;
+					position: absolute;
+                			bottom: 150px;
+                			right: 5px;
+					}
+
+div.bottom-cube > div.content > a	{
+					/* float: left; */ /* float has no effect */
+					font-size: 14px;
+					color: grey;
+					margin: 0px 5px 5px 20px;
+					position: absolute;
+                			bottom: -20px;
+                			right: 135px;
+					}
+
+div.bottom-cube > div.content > div.read-more-logo	{
+						/* float: left; */ /* float has no effect */
+						font-size: 14px;
+						margin: 0px 5px 5px 20px;
+						position: absolute;
+                				bottom: -20px;
+                				right: 225px;
+						}
+
+/* div.bottom-cube > div.content > img	{
+						float: left;
+						margin: 0px 5px 5px 5px;
+						position: absolute;
+                				bottom: 35px;
+                				right: 200px
+						} */
+/* img that is not inside a div, get no effect of the style conditions */
+
+div.bottom-cube > div.content > a:hover  {
+			    	    	 text-decoration: underline;
+                	    	    	 color: blue;
+                            	    	 }
+
+div.bottom-cube > div.content > ul	{
+					font-size: 14px;
+					margin: 0px 5px 5px 5px;
+					position: absolute;
+                			bottom: 75px;
+                			right: -50px;
+					list-style-type: none;
+					}
+
+div.bottom-cube > div.content > ul > li > a	{
+						font-size: 14px;
+						color: grey;
+						margin: 10px 5px 10px 5px;
+						}
+
+div.bottom-cube > div.content > ul > li > div.read-more-logo	{
+								font-size: 14px;
+								margin: 0px 0px 0px 0px;
+								float: left;
+								}
+
+div.bottom-cube > div.content > ul > li > a:hover  {
+			    	    	 	   text-decoration: underline;
+                	    	    	 	   color: blue;
+                            	    	 	   }
+
+div.bottom-cube > div.content > img.left-side	{
+					
+					margin: 0px 5px 5px 5px;
+					position: absolute;
+                			bottom: -30px;
+                			right: 150px;
+					}
+
+footer	{
+	background-color: grey;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	}
+
+nav.bottom-nav     {
+       		display: inline;
+		}
+
+nav.bottom-nav > ul	{
+			padding: 0px;
+			}
+
+nav.bottom-nav > ul > li     {
+			  display: inline-block;        
+			  }
+
+nav.bottom-nav > ul > li > a    {
+            		     	display: block;
+                		text-decoration: none;
+				font-size: 15px;
+				color: white;
+              			padding: 2px 10px;
+				border-style: none none none solid;
+				border-width: thin;
+             			border-color: white;
+				}
+
+nav.bottom-nav > ul > li > a:hover  {
+			    	    text-decoration: underline;
+                	    	    color: blue;
+                            	    }
+
+div.card    {
+            width: 293px;
+            height: 355px;
+	    margin: 5px;
+	    float: right;
+            position: relative;
+            }
+
+div.card-content     	{
+			color: lightgrey;
+               		width: 250px;
+                	height: 125px;
+                	position: absolute;
+                	bottom: 5px;
+                	right: 5px;
+			}
+
+div.card > div.card-content > h4	{
+					font-size: 25px;
+					color: blue;
+					margin: 10px 5px 5px 5px;
+					position: absolute;
+                			bottom: 100px;
+                			right: 5px;
+					}
+
+div.card > div.card-content > h6	{
+					font-size: 15px;
+					color: grey;
+					margin: 10px 5px 5px 5px;
+					position: absolute;
+                			bottom: 100px;
+                			right: 5px;
+					}
+
+div.card > div.card-content > p	{
+				font-size: 14px;
+				margin: 5px 5px 5px 5px;
+				position: absolute;
+                		bottom: 35px;
+                		right: 5px;
+				}
